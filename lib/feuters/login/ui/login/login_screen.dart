@@ -4,6 +4,7 @@ import 'package:flutter_complete_project/core/theming/style.dart';
 import 'package:flutter_complete_project/core/widgets/app_text_button.dart';
 import 'package:flutter_complete_project/core/widgets/app_text_form_field.dart';
 import 'package:flutter_complete_project/feuters/login/ui/login/widgets/dont_have_account_text.dart';
+import 'package:flutter_complete_project/feuters/login/ui/login/widgets/email_and_passwod.dart';
 import 'package:flutter_complete_project/feuters/login/ui/login/widgets/terms_and_conditions_text.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -39,44 +40,42 @@ class _loginScreenState extends State<loginScreen> {
                     .copyWith(height: 1.4, wordSpacing: 1.2),
               ),
               vericalSpace(36),
-              Form(
-                key: fromKey,
-                child: Column(
-                  children: [
-                    AppTextFormField(
-                      hintText: 'Email',
-                    ),
-                    vericalSpace(16),
-                    AppTextFormField(
-                      hintText: 'Password',
-                      isObscureText: isObsucreText,
-                      suffixIcon: GestureDetector(
-                          onTap: () {
-                            setState(() {
-                            isObsucreText = !isObsucreText;  
-                            });
-                          },
-                          child: Icon(isObsucreText
-                              ? Icons.visibility_off
-                              : Icons.visibility)),
-                    ),
-                    vericalSpace(24),
-                    Align(
-                      alignment: AlignmentDirectional.centerEnd ,
-                      child: Text('Forgot Password'),
-                    ),
-                    vericalSpace(40),
-                    AppTextButton(
-                      buttonText: 'Login',
-                      textStyle: TextStyles.font16WhitesemiBold,
-                      onPressed: () {},
-                    ),
-                    vericalSpace(16),
-                      const TermsAndConditionsText(),
-                      vericalSpace(60),
-                      const DontHaveAccountText(),
-                  ],
-                ),
+              Column(
+                children: [
+                  const EmailAndPasswod(),
+                  AppTextFormField(
+                    hintText: 'Email',
+                  ),
+                  vericalSpace(16),
+                  AppTextFormField(
+                    hintText: 'Password',
+                    isObscureText: isObsucreText,
+                    suffixIcon: GestureDetector(
+                        onTap: () {
+                          setState(() {
+                          isObsucreText = !isObsucreText;  
+                          });
+                        },
+                        child: Icon(isObsucreText
+                            ? Icons.visibility_off
+                            : Icons.visibility)),
+                  ),
+                  vericalSpace(24),
+                  Align(
+                    alignment: AlignmentDirectional.centerEnd ,
+                    child: Text('Forgot Password'),
+                  ),
+                  vericalSpace(40),
+                  AppTextButton(
+                    buttonText: 'Login',
+                    textStyle: TextStyles.font16WhitesemiBold,
+                    onPressed: () {},
+                  ),
+                  vericalSpace(16),
+                    const TermsAndConditionsText(),
+                    vericalSpace(60),
+                    const DontHaveAccountText(),
+                ],
               )
             ],
           ),
