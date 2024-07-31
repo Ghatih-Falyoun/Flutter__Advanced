@@ -40,7 +40,9 @@ class LoginBlocListener extends StatelessWidget {
     );
   }
 
-  void setUpErrorState(BuildContext context, String error) {
+  
+}
+void setUpErrorState(BuildContext context, String error) {
     showDialog(
       context: context,
       builder: (context) {
@@ -65,4 +67,3 @@ class LoginBlocListener extends StatelessWidget {
       },
     );
   }
-}

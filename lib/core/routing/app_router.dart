@@ -6,6 +6,7 @@ import 'package:flutter_complete_project/feuters/login/ui/home/ui/home_screen.da
 import 'package:flutter_complete_project/feuters/login/ui/login/logic/cubit/login_cubit.dart';
 import 'package:flutter_complete_project/feuters/login/ui/onboarding/onboarding_screen.dart';
 import 'package:flutter_complete_project/feuters/login/ui/login/login_screen.dart';
+import 'package:flutter_complete_project/feuters/login/ui/sing_up/logic/cubit/sing_up_cubit.dart';
 import 'package:flutter_complete_project/feuters/login/ui/sing_up/sing_up_screen.dart';
 
 class AppRouter {
@@ -24,12 +25,15 @@ class AppRouter {
         );
       case Routes.signUpScreen:
         return MaterialPageRoute(
-          builder: (context) => singUpScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getit<SingUpCubit>(),
+            child: singUpScreen(),
+          ),
         );
       case Routes.homeScreen:
         return MaterialPageRoute(
           builder: (context) => HomeScreen(),
-        );  
+        );
       default:
         return MaterialPageRoute(
           builder: (context) => Scaffold(
