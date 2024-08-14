@@ -8,7 +8,7 @@ jobs:
   distribute_to_firebase:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout my repo codeas
+    - name: Checkout my repo codeasssd
       uses: actions/checkout@v2
 
     - name: Set up JDK11
