@@ -29,7 +29,7 @@ class SingUpLisetener extends StatelessWidget {
                 context: context,
                 builder: (contextbuilder) => const Center(
                       child: CircularProgressIndicator(
-                        color: Color.fromARGB(255, 73, 0, 49),
+                        color: Color.fromARGB(255, 255, 106, 205),
                       ),
                     ));
           },
