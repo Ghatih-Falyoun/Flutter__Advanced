@@ -6,7 +6,7 @@ on:
 
 jobs:
   distribute_to_firebase:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-lates
     steps:
     - name: Checkout my repo codeas
       uses: actions/checkout@v2
