@@ -20,7 +20,7 @@ class TopArea extends StatelessWidget {
           ],
         ),
       CircleAvatar(
-          radius: 24,
+          radius: 24.h,
           backgroundColor: ( colorManager.openlightGray),
           child: SvgPicture.asset("assets/svgs/alert.svg"),
         )
