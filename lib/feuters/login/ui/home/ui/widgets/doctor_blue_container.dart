@@ -31,18 +31,24 @@ class DoctorsBlueContainer extends StatelessWidget {
               ),
               vericalSpace(16),
               Expanded(
-                  child: ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(48),
-                        )
-                      )
-                      , child: Text("Find Nearby",style: TextStyles.font13BlueRegular,),),),
+                child: ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(48),
+                      )),
+                  child: Text(
+                    "Find Nearby",
+                    style: TextStyles.font13BlueRegular,
+                  ),
+                ),
+              ),
             ]),
           ),
-          Image.asset('assets/images/doc.png')
+          Positioned(
+            right: 16,
+            child: Image.asset('assets/images/docc.png',height: 190.h,))
         ],
       ),
     );
