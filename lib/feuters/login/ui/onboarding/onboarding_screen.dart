@@ -12,7 +12,8 @@ class OnboardingScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( 
+      
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
@@ -26,7 +27,7 @@ class OnboardingScreen extends StatelessWidget {
                   padding:  EdgeInsets.symmetric(horizontal: 20.h),
                   child: Column(
                     children: [
-                      Text('Manage and schedule all of your medical appointments easily with Docdoc to get a new experience.',
+                      Text('Manage and schedule all of your medical appointments easily with Docdoc to get a new experience .',
                       style: TextStyles.font13GrayRegular,textAlign: TextAlign.center,),
                       SizedBox(height: 30.h,),
                       GetStartedButton(() {

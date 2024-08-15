@@ -28,9 +28,7 @@ class SingUpLisetener extends StatelessWidget {
             showDialog(
                 context: context,
                 builder: (contextbuilder) => const Center(
-                      child: CircularProgressIndicator(
-                        color: Color.fromARGB(255, 172, 7, 7),
-                      ),
+                      child: CircularProgressIndicator(color: colorManager.mainblue,)
                     ));
           },
         );
