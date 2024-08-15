@@ -6,6 +6,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class TextStyles {
   static TextStyle font24Black700Weight = TextStyle(
       fontSize: 24.sp, fontWeight: FontWeight.w700, color: Colors.black);
+      static TextStyle font18Black700Weight = TextStyle(
+      fontSize: 18.sp, fontWeight: FontWeight.w700, color: Colors.black);
+      static TextStyle font18White600Weight = TextStyle(
+      fontSize: 18.sp, fontWeight: FontWeight.w600, color: Colors.white);
   static TextStyle font32BlueBold = TextStyle(
       fontSize: 32.sp,
       fontWeight: FontWeight.bold,
@@ -14,6 +18,10 @@ class TextStyles {
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.regular,
       color: colorManager.mainblue);
+      static TextStyle font12DarkRegular = TextStyle(
+      fontSize: 12.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: const Color.fromARGB(255, 0, 0, 0));
   static TextStyle font24Bluebold = TextStyle(
       fontSize: 24.sp,
       fontWeight: FontWeightHelper.bold,
@@ -23,7 +31,7 @@ class TextStyles {
   static TextStyle font13blueRegular = TextStyle(
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.regular,
-      color: colorManager.gray);
+      color: colorManager.mainblue);
   static TextStyle font13BlueSemiBold = TextStyle(
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.semiBold,
