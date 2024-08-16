@@ -20,7 +20,8 @@ class DoctorListItem extends StatelessWidget {
               width: 110.h,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  color: const Color.fromARGB(255, 138, 139, 148)),
+                  color: const Color.fromARGB(255, 138, 139, 148))
+                  ,
             ),
             horizontalSpace(16.w),
             Column(
