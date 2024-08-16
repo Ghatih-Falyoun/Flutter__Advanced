@@ -18,6 +18,10 @@ class TextStyles {
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.regular,
       color: colorManager.mainblue);
+      static TextStyle font12DarkRegular = TextStyle(
+      fontSize: 12.sp,
+      fontWeight: FontWeightHelper.regular,
+      color: const Color.fromARGB(255, 0, 0, 0));
   static TextStyle font24Bluebold = TextStyle(
       fontSize: 24.sp,
       fontWeight: FontWeightHelper.bold,
@@ -27,7 +31,7 @@ class TextStyles {
   static TextStyle font13blueRegular = TextStyle(
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.regular,
-      color: colorManager.gray);
+      color: colorManager.mainblue);
   static TextStyle font13BlueSemiBold = TextStyle(
       fontSize: 13.sp,
       fontWeight: FontWeightHelper.semiBold,

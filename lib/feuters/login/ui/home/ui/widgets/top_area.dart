@@ -13,18 +13,25 @@ class TopArea extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("Hi, $UserName!",style: TextStyles.font18Black700Weight,),
-            Text('How Are you Today?',style: TextStyles.font13GrayRegular,)
+            Text(
+              "Hi, $UserName!",
+              style: TextStyles.font18Black700Weight,
+              
+            ),
+            Text(
+              'How Are you Today?',
+              style: TextStyles.font13GrayRegular,
+              
+            )
           ],
         ),
-      CircleAvatar(
+        CircleAvatar(
           radius: 24.h,
-          backgroundColor: ( colorManager.openlightGray),
+          backgroundColor: (colorManager.openlightGray),
           child: SvgPicture.asset("assets/svgs/alert.svg"),
         )
-
       ],
     );
   }

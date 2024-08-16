@@ -57,6 +57,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   build_runner: ^2.4.11
   firebase_core: ^2.24.2
+  cached_network_image: ^3.4.1
+
 
 
 dev_dependencies:
