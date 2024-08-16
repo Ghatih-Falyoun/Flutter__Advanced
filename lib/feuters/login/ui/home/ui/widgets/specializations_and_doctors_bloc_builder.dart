@@ -22,7 +22,7 @@ class SpecializationsAndDoctorsBlocBuilder extends StatelessWidget {
         return state.maybeWhen(
           specializationsLoading: () {
             return setupLoading();
-          },
+          }, 
           specializationsSuccess: (specializationsResponseModel) {
             var specializationList = specializationsResponseModel.specializationDataList;
             return setupSuccess(specializationList);
