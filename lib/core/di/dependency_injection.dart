@@ -1,6 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter_complete_project/core/networking/api_service.dart';
 import 'package:flutter_complete_project/core/networking/dio_factory.dart';
+import 'package:flutter_complete_project/feuters/login/ui/home/data/apis/home_api_service.dart';
+import 'package:flutter_complete_project/feuters/login/ui/home/data/repo/home_repo.dart';
+import 'package:flutter_complete_project/feuters/login/ui/home/logic/cubit/home_cubit.dart';
 import 'package:flutter_complete_project/feuters/login/ui/login/data/repos/login_repo.dart';
 import 'package:flutter_complete_project/feuters/login/ui/login/logic/cubit/login_cubit.dart';
 import 'package:flutter_complete_project/feuters/login/ui/sing_up/data/repo/sing_up_repo.dart';
@@ -26,4 +29,15 @@ Future<void> setupGetIt() async {
   getit.registerLazySingleton<SingUpRepo>(() => SingUpRepo(getit()));
 
   getit.registerFactory<SingUpCubit>(() => SingUpCubit(getit()));
+
+  //home
+  getit.registerLazySingleton<HomeApiService>(
+    () => HomeApiService(dio),
+  );
+  getit.registerLazySingleton<HomeRepo>(
+    () => HomeRepo(getit()),
+  );
+  getit.registerFactory<HomeCubit>(
+    () => HomeCubit(getit()),
+  );
 }
