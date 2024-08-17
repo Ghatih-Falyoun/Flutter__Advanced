@@ -4,11 +4,12 @@ import 'package:flutter_complete_project/core/helpers/spacing.dart';
 import 'package:flutter_complete_project/feuters/login/ui/home/logic/cubit/home_cubit.dart';
 import 'package:flutter_complete_project/feuters/login/ui/home/logic/cubit/home_state.dart';
 import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/doctor_blue_container.dart';
-import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/doctor_list.dart';
-import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/doctor_recommendation.dart';
-import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/doctor_speciality_see_all.dart';
-import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/doctor_speciality_view_all.dart';
-import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/specializations_and_doctors_bloc_builder.dart';
+import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/doctors_list/doctor_list.dart';
+import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/doctors_list/doctor_recommendation.dart';
+import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/doctors_list/doctor_speciality_see_all.dart';
+import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/specialization_list/speciality_view_all.dart';
+import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/doctors_list/doctors_bloc_builder.dart';
+import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/specialization_list/specializations_bloc_builder.dart';
 import 'package:flutter_complete_project/feuters/login/ui/home/ui/widgets/top_area.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -25,9 +26,12 @@ class HomeScreen extends StatelessWidget {
           children: [
             TopArea('Ghaith'),
             const DoctorsBlueContainer(),
-            vericalSpace(24.h),
+            vericalSpace(24),
             const DoctorSpecialitySeeAll(),
-            SpecializationsAndDoctorsBlocBuilder(),
+            SpecializationsBlocBuilder(),
+            //DoctorRecommendation(),
+            vericalSpace(8),
+            DoctorsBlocBuilder()
           ],
         ),
       )),

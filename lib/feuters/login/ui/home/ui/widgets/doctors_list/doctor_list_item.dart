@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class DoctorListItem extends StatelessWidget {
   Doctors? doctorsModel;
-  DoctorListItem(this.doctorsModel,{super.key});
+  DoctorListItem(this.doctorsModel, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,13 +16,16 @@ class DoctorListItem extends StatelessWidget {
         child: Row(
           children: [
             Container(
-              height: 110.w,
-              width: 110.h,
-              decoration: BoxDecoration(
+                height: 110.w,
+                width: 110.h,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  color: const Color.fromARGB(255, 138, 139, 148))
-                  ,
-            ),
+                  color: const Color.fromARGB(255, 138, 139, 148),
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  
+                )),
             horizontalSpace(16.w),
             Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -34,7 +37,7 @@ class DoctorListItem extends StatelessWidget {
                 ),
                 Text('${doctorsModel?.degree} | ${doctorsModel?.phone}'),
                 Row(
-                  children: [  
+                  children: [
                     Text("${doctorsModel?.email}"),
                   ],
                 )
